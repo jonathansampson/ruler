@@ -2,24 +2,16 @@
 
 	"use strict";
 
-	var ruler;
-
-	doc.addEventListener("DOMContentLoaded", setup, false);
+	// Build a append ruler
+	var ruler = doc.createElement("div");
+	ruler.setAttribute("class", "smpsnRuler");
+	doc.body.appendChild(ruler);
 
 	win.addEventListener("resize", updateDims, false);
 	win.addEventListener("resize", addLabels, false);
-
-	function setup () {
-
-		// Build a append ruper
-		ruler = doc.createElement("div");
-		ruler.setAttribute("class", "smpsnRuler");
-		doc.body.appendChild(ruler);
-
-		// Setup onscreen metrics
-		addLabels(); updateDims();
-
-	}
+		
+	// Setup onscreen metrics
+	addLabels(); updateDims();
 
 	function updateDims () {
 
