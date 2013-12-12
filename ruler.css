@@ -1,0 +1,34 @@
+.smpsnRuler {
+	z-index: 256;
+	top: 0; left: 0;
+	position: absolute;
+	width: 100%; height: 100%;
+	background-image: 
+		linear-gradient(to right, #CCC 1px, transparent 1px),
+		linear-gradient(to right, #CCC 1px, transparent 1px),
+		linear-gradient(to right, #FFF 1px, rgba(0, 0, 0, .5) 1px);
+	background-size: 
+		10px 4px, 
+		50px 8px, 
+		100px 16px;
+	background-repeat: 
+		repeat-x;
+}
+
+.smpsnRuler::after {
+	top: 20px; right: 0;
+	position: absolute;
+	content: attr(data-dimensions);
+	background: rgba(0, 0, 0, .5);
+	color: rgba(255, 255, 255, .75);
+	padding: 0 .5em;
+	border-radius: .1em 0 0 .1em;
+}
+
+.smpsnRuler .label {
+	color: rgba(255, 255, 255, .75);
+	padding: 0 .5em;
+	position: absolute;
+	top: 5px;
+	font-size: .65em;
+}
